@@ -1,0 +1,79 @@
+---
+import Badge from './Badge.astro';
+---
+
+<section id="projects" class="w-[1280px] mx-auto py-6">
+  <div class="text-center py-4">
+    <h1 class="lavi">Projectos</h1>
+  </div>
+  <div class="flex justify-center">
+    <div class="card">
+      <h2 class="text-lg">Turnero</h2>
+      <p class="py-6">
+        Aplicación web para la gestión de turnos en un centro médico, que
+        permite a los usuarios registrar y cancelar turnos de manera rápida y
+        sencilla. Desarrollada con React y Vite en el frontend, Express y
+        Typescript en el backend, PostgreSQL como base de datos y Axios para la
+        comunicación entre cliente y servidor.
+      </p>
+      <div>
+        <Badge>React</Badge>
+        <Badge>Vite</Badge>
+        <Badge>Express</Badge>
+        <Badge>Typescript</Badge>
+        <Badge>PostgreSQL</Badge>   
+        <Badge>Axios</Badge>
+      </div>
+    </div>
+    <div class="card">
+      <h2 class="text-lg">Sistema de gestión de ventas y productos</h2>
+      <p class="py-6">
+        Proyecto Final del bootcamp Soy Henry llevado de manera colaborativa;
+        consta de una app web para la gestión de ventas e inventario de
+        productos. Permite el registro y autenticación de usuarios,
+        diferenciando entre administradores y vendedores. Los administradores
+        pueden registrar vendedores a su cargo según un plan de suscripción y
+        llevar un control. De la misma manera, cada vendedor cuenta con perfil
+        propio, y son responsables de gestionar las ventas, mientras la
+        plataforma facilita el control del inventario de productos en tiempo
+        real.
+      </p>
+      <div>
+        <Badge>React</Badge>
+        <Badge>Redux</Badge>
+        <Badge>Node.js</Badge>
+        <Badge>TypeScript</Badge>
+        <Badge>PostgreSQL</Badge>
+        <Badge>NestJS</Badge>
+        <Badge>Vercel</Badge>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+    h1, h2, p {
+        font-family: 'onest-variable', sans-serif;
+    }
+    section {
+        background-color: #F1F5F9;
+    }
+    .lavi {
+    font-family: "Lavishly Yours", cursive;
+    font-size: 2em;
+    }
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    gap: 10px;
+  }
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+</style>

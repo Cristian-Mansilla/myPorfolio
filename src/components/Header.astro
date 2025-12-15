@@ -1,0 +1,99 @@
+---
+const name = "Cristian";
+const surname = "Mansilla";
+---
+
+<header class="flex items-center p-8 max-w-[1280px] mx-auto">
+  <section id="inicio" class="justify-left">
+    <div class="p-4 static">
+      <h1 class="text-3xl">Hola, soy {name} {surname}</h1>
+      <h2 class="atractive">Analista en Sistemas <br />y Desarrollador Web</h2>
+      <p class="text-3xl">
+        Me dedico a transformar ideas en aplicaciones web eficientes, seguras y
+        escalables
+      </p>
+      <button
+        id="btnContactar"
+        onclick="location.href='#contact'"
+        class="bg-gray-100 py-2 px-8 rounded hover:bg-gray-200 border-1 object-bottom absolute bottom-66.5"
+        >Contartar -></button
+      >
+    </div>
+  </section>
+  <section class="justify-center mx-auto">
+    <div>
+      <p class="px-20 py-2"><strong>Nombre:</strong> {name} {surname}</p>
+      <p class="px-10 py-2"><strong>Region:</strong> Córdoba, Argentina</p>
+    </div>
+    <div class="flex">
+      <div class="flex gap-4 items-top py-4 w-50 contenedor">
+        <a
+          href="https://www.linkedin.com/in/cristian-gerardo-mansilla-07bb542b7"
+          ><img
+            class="w-10 h-10"
+            src="../../src/assets/linkedin-logo.png"
+            alt="linkedin"
+          /></a
+        >
+        <a href="https://github.com/Cristian-Mansilla"
+          ><img
+            class="w-10 h-10"
+            src="../../src/assets/github-logo.png"
+            alt="github"
+          /></a
+        >
+        <a
+          href="https://drive.google.com/file/d/1m2nq1PKGckxp-raQmuq1-NBa4IkKEZ0p/view?usp=drive_link"
+          class="bg-gray-100 py-2 px-8 rounded hover:bg-gray-200 elem-fondo border-1"
+          download
+        >
+          Descargar CV</a
+        >
+      </div>
+      <div class="image-container">
+        <img
+          class="zoomed"
+          src="../../src/assets/imgPerfil.jpeg"
+          alt="imgPerfil"
+        />
+      </div>
+    </div>
+  </section>
+</header>
+
+<style>
+  header {
+    font-family: "onest-variable", sans-serif;
+    background-color: #f8fafc;
+  }
+  .atractive {
+    background: linear-gradient(to right, #023c68, #e336ed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 2em;
+  }
+  .contenedor {
+    position: relative; /* Define el contenedor como referencia */
+  }
+  .elem-fondo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  .image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 300px;
+    height: 290px;
+  }
+  .zoomed {
+    position: absolute;
+    transform: scale(1.2); /* Aumenta el tamaño al 120% */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+</style>

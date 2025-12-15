@@ -1,0 +1,60 @@
+---
+const skills = [
+  { name: 'JavaScript', level: 80, color: '#FFF200', description: 'Experiencia en desarrollo web con JavaScript, incluyendo frameworks modernos como Vue.js y React' },
+  { name: 'React', level: 70, color: '#3C87FF', description: 'Conocimiento intermedio en React para crear componentes reutilizables y manejar estados'},
+  { name: 'PostgreSQL', level: 70, color: '#699ECA', description: 'Integracion con base de datos relacionales, definicion de relaciones, operaciones transaccionales ' },
+  { name: 'Node.js', level: 75, color: '#417e38', description: 'Experiencia en desarrollo backend utilizando Node.js, creando APIs robustas y eficientes. Manejo de frameworks como Express.' },
+  { name: 'NestJS', level: 75, color: '#EA2845', description: 'Desarrollo APIs robustas y escalables con el framework de Node organizando el codigo en modulos, controladores y servicios' },
+  { name: 'GitHub', level: 70, color: '#000000', description: 'Mantengo un control de mis proyectos lo que me permite crear ramas, fusionar cambios o revertirlos como freelance o en colaborativo  ' },
+];
+---
+
+<section id="skills" class="w-[1280px] mx-auto p-8">
+  <div class="text-center py-4">
+    <h1 class="lavi">Habilidades Profesionales</h1>
+  </div>
+    <div class="flex flex-wrap justify-center gap-8">
+        {skills.map((skill) => (
+        <div class="w-[30%] min-w-[300px]">
+            <!-- titulo de progreso -->
+            <div class="flex justify-between mb-1">
+            <h2>{skill.name}</h2>
+            <p>{skill.level}%</p>
+            </div>
+            <!-- barra de progreso -->
+            <div class="w-90 bg-neutral-quaternary rounded-full h-2 progress-fill">
+            <div
+                class="h-2 rounded-full progress-fill"
+                style={`width: ${skill.level}%; background-color: ${skill.color}`}
+                ></div>
+            </div>
+                <!-- descripcion de la habilidad -->
+                <p>{skill.description}</p>
+        </div>
+        ))}
+</section>
+
+<style>
+    p, h2, h3 {
+        font-family: 'onest-variable', sans-serif;
+    }
+    section {
+        background-color: #F8FAFC;
+    }
+  .lavi {
+    font-family: "Lavishly Yours", cursive;
+    font-size: 2em;
+  }
+  .bg-neutral-quaternary {
+    background-color: #e4e4e7; /* Color de fondo de la barra */
+  }
+  .rounded-full {
+    border-radius: 9999px; /* Bordes redondeados */
+  }
+  .progress-fill {
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra interna para el relleno de la barra */
+  }
+  .space-y-4 > * + * {
+    margin-top: 16px; /* Espaciado entre las barras */
+  }
+</style>
